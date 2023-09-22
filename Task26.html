@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Task26.css">
+    <title>Task 26</title>
+</head>
+<body>
+    <div class="profile">
+        <div class="img"></div>
+        <p class="name">@thisisaliyev</p>
+    </div>
+
+    <div class="follows">
+        <p>
+            <span class="score1">186</span>
+            <span>Following</span>
+        </p>
+
+        <p>
+            <span class="score2">12100</span>
+            <span>Followers</span>
+        </p>
+        <p>
+            <span class="score3">328500</span>
+            <span>Likes</span>
+        </p>
+    </div>
+    <script>
+             let score1 = 0;
+             let score2 = 0;
+             let score3 = 0;
+            
+             setInterval(() => {
+                    if(score1 === 186) {
+                        return 186;
+                    } else {
+                        score1++;
+                    }
+                    document.querySelector('.score1').innerHTML = score1;
+                }
+            , 10);
+
+            setInterval(() => {
+                    if(score2 < 1000) {
+                        score2++;
+                    } else if(score2 === 1000) {
+                        let x = 0;
+                        setInterval(() => {
+                            x++;
+                        if(x<13) {
+                            score2 = `${x}k`;
+                        } else {
+                            score2 = `12.3k`;
+                        }
+                        },50)
+                    }
+                    document.querySelector('.score2').innerHTML = score2;
+                }
+            , 1);
+
+            setInterval(() => {
+                    if(score3 < 1000) {
+                        score3++;
+                    } else if(score3===1000) {
+                        let x = 0;
+                        setInterval(() => {
+                            x++;
+                        if(x<335) {
+                            score3 = `${x}k`;
+                        } else {
+                            score3 = `334.9k`;
+                        }
+                        },6)
+                    }
+                    document.querySelector('.score3').innerHTML = score3;
+                }
+            , 1)
+    </script>
+</body>
+</html>
